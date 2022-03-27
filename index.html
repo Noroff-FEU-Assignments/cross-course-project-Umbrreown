@@ -8,21 +8,25 @@
   <title>Square Eyes</title>
 </head>
 <body>
-<div class="container">
+<div id="container">
   <header>
     <div>
       <img src="images/SquareEyes_Logo.png" alt="Square Eyes Logo">
     </div>
     <div>
-      <div>
-        <a href="#signup">Sign up</a>
+    <div id="user-actions">
+      <div id="div-sign-up">
+        <a href="#signup" id="sing-up">Sign up</a>
+      </div>
+      <div id="div-sign-in-btn">
         <a href="#signin" id="sign-in">Sign in</a>
       </div>
-      <div>
-        <input type="text" name="Search for..." id="search-field">
-        <input type="submit" value="Search"> <!-- fix this later  -->
-      </div>
     </div>
+    <div id="search-area">
+      <input type="text" placeholder="Search for..." name="search" class="input-field">
+      <input class="btn" type="submit" value="Search"> 
+    </div>
+  </div>
   </header>
   <section id="main">
     <div id="main-welcome">
@@ -30,20 +34,20 @@
       <div>
         <p id="text-welcome"> Explore indie movies from hundreds of passionate film makers, sign up for free today!</p>
       </div>
-      <div>
+      <div id="welcome-content">
       <div>
         <p id="text-welcome-watch">Watch anywhere, pay only for what you want.</p>
       </div>
       <div>
         <p>Enter your email to begin</p>
-        <input type="text" name="E-mail address" id="email-field">
-        <input type="submit" value="Get started"> <!-- Fix this later -->
+        <input type="text" placeholder="Enter E-Mail..." name="e-mail" class="input-field">
+        <input class="btn" type="submit" value="Get started">
       </div>
     </div>
     </div>
   </div>
     <div id="main-trending">
-      <div class="main-inner">
+      <div class="main-inner-movies">
       <div>
         <p id="text-trending">Trending</p>
       </div>
@@ -55,7 +59,7 @@
     </div>
     </div>
     <div id="main-newest-releases">
-      <div class="main-inner">
+      <div class="main-inner-movies">
       <div>
         <p id="text-newest-releases">Newest Releases</p>
       </div>
