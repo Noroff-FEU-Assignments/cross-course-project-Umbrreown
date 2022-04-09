@@ -4,39 +4,42 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Heike Berg">
+  <meta name="description" content="Website for on demand Indie movies">
+  <meta name="keywords" content="Indie movies, viewing, movies, indie">
   <link rel="stylesheet" href="/css/style.css">
-  <title>Square Eyes</title>
+  <title>Home | SquareEyes</title>
 </head>
 <body>
-<div id="container">
+<div class="container">
   <header>
     <div>
       <img src="images/SquareEyes_Logo_dark3.png" alt="Square Eyes Logo">
     </div>
     <div>
-    <div id="user-actions">
-      <div id="div-sign-up">
-        <a href="#signup" id="sing-up">Sign up</a>
+    <div class="user-actions">
+      <div class="div-sign-up">
+        <a href="signup.html" class="sign-up">Sign up</a>
       </div>
-      <div id="div-sign-in-btn">
-        <a href="#signin" id="sign-in">Sign in</a>
+      <div class="div-sign-in-btn">
+        <a href="signed-in.html" class="sign-in">Sign in</a>
       </div>
     </div>
-    <div id="search-area">
+    <div class="search-area">
       <input type="text" placeholder="Search for..." name="search" class="input-field">
       <input class="btn" type="submit" value="Search"> 
     </div>
   </div>
   </header>
-  <section id="main">
-    <div id="main-welcome">
+  <div class="main-home">
+    <div class="main-welcome">
     <div class="main-inner">
       <div>
-        <h1 id="text-welcome"> Explore indie movies from hundreds of passionate film makers, sign up for free today!</h1>
+        <h1 class="text-welcome"> Explore indie movies from hundreds of passionate film makers, sign up for free today!</h1>
       </div>
-      <div id="welcome-content">
+      <div class="welcome-content">
       <div>
-        <p id="text-welcome-watch">Watch anywhere, pay only for what you want.</p>
+        <p class="text-welcome-watch">Watch anywhere, pay only for what you want.</p>
       </div>
       <div>
         <p>Enter your email to begin</p>
@@ -46,10 +49,16 @@
     </div>
     </div>
   </div>
-    <div id="main-trending">
+  <div class="welcometext400px">
+    <p>Explore indie movies from hundreds of passionate film makers, sign up for free today!</p>
+  </div>
+  <div class="signup400px">
+    <a href="#signup" class="sign-up">Sign up</a>
+  </div>
+    <div class="main-trending">
       <div class="main-inner-movies">
       <div>
-        <p id="text-trending">Trending</p>
+        <p class="text-trending">Trending</p>
       </div>
       <div class="picture-reel">
         <img src="images/lynnlucy.png" alt="Movie 1">
@@ -58,10 +67,10 @@
       </div>
     </div>
     </div>
-    <div id="main-newest-releases">
+    <div class="main-newest-releases">
       <div class="main-inner-movies">
       <div>
-        <p id="text-newest-releases">Newest Releases</p>
+        <p class="text-newest-releases">Newest Releases</p>
       </div>
       <div class="picture-reel">
         <img src="images/kajillionaire.png" alt="Movie 4">
@@ -70,7 +79,7 @@
       </div>
     </div>
     </div>
-  </section>
+  </div>
 </div>
 </body>
 </html>
