@@ -51,11 +51,11 @@ header {
   box-shadow: 0px 10px 15px black;
 }
 
-header > div > img {
+header > div > a > img {
   max-height: 100%;
 }
 
-header > div > img:hover {
+header > div > a > img:hover {
   cursor: pointer;
 }
 
@@ -240,6 +240,30 @@ header > div > img:hover {
 /* ~~~~~~~~~~~~ End of Home page ~~~~~~~~~~~~ */
 
 /* ~~~~~~~~~~~~ Start of Sign Up page ~~~~~~~~~~~~ */
+
+.main-sign-in {
+  display: grid;
+  grid-template-areas: "signin signup";
+  width: 80%;
+  align-self: center;
+}
+
+.sign-in-box {
+  display: flex;
+  flex-direction: column;
+  grid-area: signin;
+  border-right: 4px solid #661515;
+  width: 10rem;
+  height: 2rem;
+}
+
+.sign-up-box {
+  display: flex;
+  flex-direction: column;
+  grid-area: signup;
+  width: 10rem;
+  height: 2rem;
+}
 
 /* ~~~~~~~~~~~~ End of Sign Up page ~~~~~~~~~~~~ */
 
