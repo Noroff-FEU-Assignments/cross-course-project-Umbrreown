@@ -382,8 +382,8 @@ header div a img:hover {
   align-self: center;
   display: grid;
   grid-template-areas:
-    "box box box title . back"
-    "box box box title . ."
+    "box box box title title back"
+    "box box box title title back"
     "box box box . . ."
     "synopsis synopsis synopsis . . suggestions"
     "synopsis synopsis synopsis . . suggestions";
@@ -393,10 +393,17 @@ header div a img:hover {
 .preview-box {
   grid-area: box;
   background-color: #646464;
-  border: 2px solid #212121;
-  min-height: 360px;
-  min-width: 440px;
+  border: 2px solid #646464;
   margin: 0 2rem 1rem 0;
+  background-image: url(/images/previewwebsite2.png);
+  min-height: 380px;
+  min-width: 400px;
+  background-size: cover;
+  background-position: center;
+}
+
+.preview-box:hover {
+  cursor: pointer;
 }
 
 .movie-description {
