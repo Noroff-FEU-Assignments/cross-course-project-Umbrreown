@@ -52,11 +52,11 @@ header {
   box-shadow: 0px 10px 15px black;
 }
 
-header > div > a > img {
+header div a img {
   max-height: 100%;
 }
 
-header > div > a > img:hover {
+header div a img:hover {
   cursor: pointer;
 }
 
@@ -108,11 +108,11 @@ header > div > a > img:hover {
   display: flex;
   justify-content: space-evenly;
 }
-.picture-reel > img {
-  max-height: 15rem;
+.picture-reel img {
+  max-height: 12rem;
 }
 
-.picture-reel > img:hover {
+.picture-reel img:hover {
   box-shadow: 0px 10px 15px black;
   cursor: pointer;
 }
@@ -244,26 +244,44 @@ header > div > a > img:hover {
 
 .main-sign-in {
   display: grid;
-  grid-template-areas: "signin signup";
+  grid-template-areas:
+    "signin devide . signup"
+    ". devide . signup"
+    ". devide . signup"
+    ". devide . signup";
   width: 80%;
   align-self: center;
+  color: #979797;
 }
 
+.devider {
+  grid-area: devide;
+  border-right: 4px solid #661515;
+}
 .sign-in-box {
   display: flex;
   flex-direction: column;
   grid-area: signin;
-  border-right: 4px solid #661515;
-  width: 10rem;
-  height: 2rem;
+}
+
+.sign-in-field {
+  margin-right: 0;
+  margin-top: 1%;
+  height: 1.5rem;
+  width: 15rem;
 }
 
 .sign-up-box {
   display: flex;
   flex-direction: column;
   grid-area: signup;
-  width: 10rem;
-  height: 2rem;
+}
+
+.sign-up-field {
+  margin-right: 0;
+  margin-top: 1%;
+  height: 1.5rem;
+  width: 15rem;
 }
 
 /* ~~~~~~~~~~~~ End of Sign Up page ~~~~~~~~~~~~ */
@@ -409,10 +427,6 @@ header > div > a > img:hover {
 }
 /* ~~~~~~~~~~~~ End of Preview page ~~~~~~~~~~~~ */
 
-/* ~~~~~~~~~~~~ Start of Purchase page ~~~~~~~~~~~~ */
-
-/* ~~~~~~~~~~~~ End of Purchase page ~~~~~~~~~~~~ */
-
 /* ~~~~~~~~~~~~ Start of Watch page ~~~~~~~~~~~~ */
 
 /* ~~~~~~~~~~~~ End of Watch page ~~~~~~~~~~~~ */
@@ -440,7 +454,7 @@ header > div > a > img:hover {
   grid-area: pic;
 }
 
-.profile-pic > img {
+.profile-pic img {
   height: 100%;
 }
 
@@ -470,7 +484,7 @@ header > div > a > img:hover {
   color: #fff;
 }
 
-.history > img {
+.history img {
   max-height: 10rem;
   box-shadow: 0px 10px 15px black;
   cursor: pointer;
@@ -539,9 +553,7 @@ header > div > a > img:hover {
     height: 8%;
     width: 90%;
   }
-  header > div > img {
-    max-height: 100%;
-  }
+
   .div-sign-up {
     display: none;
   }
@@ -575,7 +587,7 @@ header > div > a > img:hover {
     min-width: 300px;
     margin: 2% 0%;
   }
-  .picture-reel > img {
+  .picture-reel img {
     max-height: 8rem;
   }
 }
