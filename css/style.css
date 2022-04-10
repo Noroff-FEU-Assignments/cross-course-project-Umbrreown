@@ -528,9 +528,6 @@ header > div > a > img:hover {
   font-weight: bold;
 }
 
-.input-feedback-box {
-}
-
 .feedback-send-btn {
   grid-area: send;
 }
