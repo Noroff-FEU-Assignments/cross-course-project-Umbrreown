@@ -45,6 +45,7 @@ header {
   display: flex;
   min-height: 7rem;
   max-height: 7rem;
+  max-width: 98%;
   justify-content: space-between;
   padding: 2% 5% 2% 5%;
   margin: 0% 0% 4% 0%;
@@ -375,6 +376,12 @@ header div a img:hover {
   flex-direction: column;
   gap: 2rem;
 }
+
+.search-result-text {
+  color: #979797;
+  font-weight: bold;
+  margin-left: 8%;
+}
 /* ~~~~~~~~~~~~ End of Search Result page ~~~~~~~~~~~~ */
 
 /* ~~~~~~~~~~~~ Start of Preview page ~~~~~~~~~~~~ */
@@ -396,8 +403,9 @@ header div a img:hover {
   border: 2px solid #646464;
   margin: 0 2rem 1rem 0;
   background-image: url(/images/previewwebsite2.png);
-  min-height: 380px;
-  min-width: 400px;
+  min-height: 40vh;
+  min-width: 40vw;
+  max-width: 50vw;
   background-size: cover;
   background-position: center;
 }
@@ -436,6 +444,29 @@ header div a img:hover {
 
 /* ~~~~~~~~~~~~ Start of Watch page ~~~~~~~~~~~~ */
 
+.watch-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.back-arrow {
+  height: 5rem;
+  width: 7rem;
+}
+
+.play-button-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  height: 40rem;
+}
+
+.play-button-div img {
+  height: 5rem;
+  width: 5rem;
+}
+
 /* ~~~~~~~~~~~~ End of Watch page ~~~~~~~~~~~~ */
 
 /* ~~~~~~~~~~~~ Start of Profile page ~~~~~~~~~~~~ */
@@ -444,7 +475,7 @@ header div a img:hover {
   display: grid;
   grid-template-areas:
     ". . . . . . . ."
-    "pic static dynamic . . . . history"
+    ". static dynamic . . . . history"
     ". static dynamic . . . . history"
     ". . . . . . . history"
     ". . . . . . . ."
@@ -555,7 +586,15 @@ header div a img:hover {
 
 /* ~~~~~~~~~~~~ End of Settings page ~~~~~~~~~~~~ */
 
-@media only screen and (max-width: 400px) {
+/* ~~~~~~~~~~~~ Start of Mobile Menu ~~~~~~~~~~~~ */
+
+.mobile-menu {
+  display: none;
+}
+
+/* ~~~~~~~~~~~~ End of Mobile Menu ~~~~~~~~~~~~ */
+
+@media only screen and (max-width: 768px) {
   header {
     height: 8%;
     width: 90%;
@@ -596,5 +635,100 @@ header div a img:hover {
   }
   .picture-reel img {
     max-height: 8rem;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .user-actions {
+    display: none;
+  }
+  .main-home {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-preview {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-profile {
+    display: flex;
+    flex-direction: column;
+  }
+  .profile-text-static {
+    display: none;
+  }
+  .profile-text-dynamic {
+    display: none;
+  }
+  .help {
+    align-self: center;
+    margin-top: 2rem;
+  }
+  .main-search-results {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-search-results .picture-reel {
+    display: block;
+    align-items: center;
+  }
+  .main-settings {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-sign-up {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-sign-in {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-watch {
+    display: flex;
+    flex-direction: column;
+  }
+  .preview-box {
+    min-height: 25vh;
+    min-width: 80vw;
+  }
+  .main-signedIn {
+    display: flex;
+    flex-direction: column;
+  }
+  .back-btn {
+    display: flex;
+    justify-content: center;
+  }
+  .mobile-menu {
+    position: sticky;
+    display: grid;
+    grid-template-areas: "profile home search";
+    background-color: #661515;
+    align-self: center;
+    justify-content: space-around;
+    width: 98%;
+  }
+  .mobile-profile {
+    grid-area: profile;
+    width: 15vw;
+  }
+  .mobile-home {
+    grid-area: home;
+    width: 15vw;
+  }
+  .mobile-search-results {
+    grid-area: search;
+    width: 15vw;
+  }
+  .main-trending {
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .main-newest-releases {
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .picture-reel img {
+    max-height: 6rem;
   }
 }
