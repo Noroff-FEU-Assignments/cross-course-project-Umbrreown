@@ -351,9 +351,98 @@ header > div > a > img:hover {
 
 /* ~~~~~~~~~~~~ Start of Search Result page ~~~~~~~~~~~~ */
 
+.main-search-results {
+  align-self: center;
+  display: grid;
+  grid-template-areas:
+    "box title back"
+    "synopsis suggestions";
+  gap: 2rem;
+  width: 80%;
+}
+
+.preview-box {
+  grid-area: box;
+  background-color: #646464;
+  border: 2px solid #212121;
+}
+
+.movie-title {
+  grid-area: title;
+  color: #979797;
+  font-weight: bold;
+}
+
+.movie-title-text {
+  color: #979797;
+  word-wrap: break-word;
+  width: 20%;
+}
+
+.movie-synopsis {
+  grid-area: synopsis;
+  color: #979797;
+  font-weight: bold;
+}
+
+.movie-synopsis-text {
+  color: #979797;
+  word-wrap: break-word;
+  width: 40%;
+}
+
+.movie-suggestions {
+  grid-area: suggestions;
+}
+
 /* ~~~~~~~~~~~~ End of Search Result page ~~~~~~~~~~~~ */
 
 /* ~~~~~~~~~~~~ Start of Preview page ~~~~~~~~~~~~ */
+
+.main-profile {
+  align-self: auto;
+  display: grid;
+  grid-template-areas:
+    "email emaildynamic"
+    "phone phonedynamic"
+    "billing billingdynamic";
+  width: 80%;
+}
+
+.username-text {
+  color: #979797;
+  font-weight: bold;
+}
+
+.email-text {
+  grid-area: email;
+  color: #979797;
+}
+
+.email-text-dynamic {
+  grid-area: emaildynamic;
+  color: #979797;
+}
+
+.phone-text {
+  grid-area: phone;
+  color: #979797;
+}
+
+.phone-text-dynamic {
+  grid-area: phonedynamic;
+  color: #979797;
+}
+
+.billing-text {
+  grid-area: billing;
+  color: #979797;
+}
+
+.billing-text-dynamic {
+  grid-area: billingdynamic;
+  color: #979797;
+}
 
 /* ~~~~~~~~~~~~ End of Preview page ~~~~~~~~~~~~ */
 
