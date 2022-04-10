@@ -43,7 +43,8 @@ a:hover {
 
 header {
   display: flex;
-  max-height: 10%;
+  min-height: 7rem;
+  max-height: 7rem;
   justify-content: space-between;
   padding: 2% 5% 2% 5%;
   margin: 0% 0% 4% 0%;
@@ -352,12 +353,22 @@ header > div > a > img:hover {
 /* ~~~~~~~~~~~~ Start of Search Result page ~~~~~~~~~~~~ */
 
 .main-search-results {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+/* ~~~~~~~~~~~~ End of Search Result page ~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~ Start of Preview page ~~~~~~~~~~~~ */
+.main-preview {
   align-self: center;
   display: grid;
   grid-template-areas:
-    "box title back"
-    "synopsis suggestions";
-  gap: 2rem;
+    "box box box title . back"
+    "box box box title . ."
+    "box box box . . ."
+    "synopsis synopsis synopsis . . suggestions"
+    "synopsis synopsis synopsis . . suggestions";
   width: 80%;
 }
 
@@ -365,18 +376,22 @@ header > div > a > img:hover {
   grid-area: box;
   background-color: #646464;
   border: 2px solid #212121;
+  min-height: 360px;
+  min-width: 440px;
+  margin: 0 2rem 1rem 0;
 }
 
-.movie-title {
+.movie-description {
   grid-area: title;
   color: #979797;
   font-weight: bold;
 }
-
 .movie-title-text {
-  color: #979797;
-  word-wrap: break-word;
-  width: 20%;
+  font-weight: normal;
+}
+.back-btn {
+  grid-area: back;
+  text-align: end;
 }
 
 .movie-synopsis {
@@ -386,64 +401,12 @@ header > div > a > img:hover {
 }
 
 .movie-synopsis-text {
-  color: #979797;
-  word-wrap: break-word;
-  width: 40%;
+  font-weight: normal;
 }
 
 .movie-suggestions {
   grid-area: suggestions;
 }
-
-/* ~~~~~~~~~~~~ End of Search Result page ~~~~~~~~~~~~ */
-
-/* ~~~~~~~~~~~~ Start of Preview page ~~~~~~~~~~~~ */
-
-.main-profile {
-  align-self: auto;
-  display: grid;
-  grid-template-areas:
-    "email emaildynamic"
-    "phone phonedynamic"
-    "billing billingdynamic";
-  width: 80%;
-}
-
-.username-text {
-  color: #979797;
-  font-weight: bold;
-}
-
-.email-text {
-  grid-area: email;
-  color: #979797;
-}
-
-.email-text-dynamic {
-  grid-area: emaildynamic;
-  color: #979797;
-}
-
-.phone-text {
-  grid-area: phone;
-  color: #979797;
-}
-
-.phone-text-dynamic {
-  grid-area: phonedynamic;
-  color: #979797;
-}
-
-.billing-text {
-  grid-area: billing;
-  color: #979797;
-}
-
-.billing-text-dynamic {
-  grid-area: billingdynamic;
-  color: #979797;
-}
-
 /* ~~~~~~~~~~~~ End of Preview page ~~~~~~~~~~~~ */
 
 /* ~~~~~~~~~~~~ Start of Purchase page ~~~~~~~~~~~~ */
@@ -455,10 +418,122 @@ header > div > a > img:hover {
 /* ~~~~~~~~~~~~ End of Watch page ~~~~~~~~~~~~ */
 
 /* ~~~~~~~~~~~~ Start of Profile page ~~~~~~~~~~~~ */
+.main-profile {
+  align-self: center;
+  display: grid;
+  grid-template-areas:
+    ". . . . . . . ."
+    "pic static dynamic . . . . history"
+    ". static dynamic . . . . history"
+    ". . . . . . . history"
+    ". . . . . . . ."
+    ". psw . . . . . ."
+    ". psw . . . . . ."
+    ". . . . . . . help";
+  width: 80%;
+  height: 35rem;
+  color: #979797;
+  font-weight: bold;
+}
+
+.profile-pic {
+  grid-area: pic;
+}
+
+.profile-pic > img {
+  height: 100%;
+}
+
+.profile-text-static {
+  grid-area: static;
+}
+
+.profile-text-static :nth-child(1) {
+  color: #fff;
+}
+
+.profile-text-dynamic {
+  position: relative;
+  grid-area: dynamic;
+  top: 2.1rem;
+}
+
+.psw {
+  grid-area: psw;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.history {
+  grid-area: history;
+  color: #fff;
+}
+
+.history > img {
+  max-height: 10rem;
+  box-shadow: 0px 10px 15px black;
+  cursor: pointer;
+}
+
+.help {
+  grid-area: help;
+  text-align: end;
+  align-self: flex-end;
+}
 
 /* ~~~~~~~~~~~~ End of Profile page ~~~~~~~~~~~~ */
 
 /* ~~~~~~~~~~~~ Start of Settings page ~~~~~~~~~~~~ */
+
+.main-settings {
+  align-self: center;
+  width: 80%;
+  color: white;
+  display: grid;
+  grid-template-areas:
+    "help . . . . . . ."
+    ". . . . . . . feedback"
+    "user . . . . . . feedback"
+    "email . . . . . . feedback"
+    ". . . . . . . send";
+}
+
+.feedback-help {
+  grid-area: help;
+  font-weight: bold;
+  font-size: large;
+}
+
+.username-change-field {
+  grid-area: user;
+  display: flex;
+  flex-direction: column;
+}
+
+.email-change-field {
+  grid-area: email;
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-field {
+  grid-area: feedback;
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-text {
+  color: #979797;
+  font-weight: bold;
+}
+
+.input-feedback-box {
+}
+
+.feedback-send-btn {
+  grid-area: send;
+}
 
 /* ~~~~~~~~~~~~ End of Settings page ~~~~~~~~~~~~ */
 
