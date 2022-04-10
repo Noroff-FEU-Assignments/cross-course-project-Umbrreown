@@ -192,7 +192,7 @@ header div a img:hover {
 .main-welcome {
   width: 100%;
   grid-area: welcome;
-  background-image: url(/images/welcome-bg.png);
+  background-image: url(/images/welcome-bg.jpg);
   box-shadow: 0px 10px 15px black;
 }
 
