@@ -393,7 +393,8 @@ header div a img:hover {
     "box box box title title back"
     "box box box . . ."
     "synopsis synopsis synopsis . . suggestions"
-    "synopsis synopsis synopsis . . suggestions";
+    "synopsis synopsis synopsis . . suggestions"
+    "likethis likethis likethis likethis . .";
   width: 80%;
 }
 
@@ -439,7 +440,14 @@ header div a img:hover {
 
 .movie-suggestions {
   grid-area: suggestions;
-  padding: 10px;
+}
+
+.movie-likethis {
+  grid-area: likethis;
+  min-height: 40vh;
+  min-width: 40vw;
+  max-width: 50vw;
+  padding-left: 10%;
 }
 /* ~~~~~~~~~~~~ End of Preview page ~~~~~~~~~~~~ */
 
