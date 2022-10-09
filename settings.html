@@ -8,6 +8,7 @@
   <meta name="description" content="Website for on demand Indie movies">
   <meta name="keywords" content="Indie movies, viewing, movies, indie">
   <link rel="stylesheet" href="/css/style.css">
+  <script defer src="/formValidation.js"></script>
   <title>Settings | SquareEyes</title>
 </head>
 <body>
@@ -48,10 +49,22 @@
         <br>
         Please let us know below.
       </p>
-    <input type="text" placeholder="Email" name="input-email" class="input-field">
-    <textarea class="input-feedback-box" name="input-feedback-text" rows="10" cols="50" placeholder="Type here..."></textarea>
+      <form id="contactForm" action="/settings.html">
+        <label for="name"></label>
+        <input type="text" id="name" name="name" placeholder="Name">
+        <br>
+        <label for="contactEmail"></label>
+        <input type="email" id="contactEmail" name="contactEmail" placeholder="E-mail">
+        <br>
+        <label for="subject"></label>
+        <input type="text" id="subject" name="subject" placeholder="Subject">
+        <br>
+        <label for="mailContent"></label>
+        <textarea name="mailContent" id="mailContent" class="input-feedback-box" cols="30" rows="10"></textarea>
     <div class="feedback-send-btn">
     <input class="btn" type="submit" value="Send">
+    </form>
+    <div id="formWarningDiv"></div>
     </div>
     </div>
   </div>

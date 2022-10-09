@@ -7,6 +7,7 @@
   <meta name="author" content="Heike Berg">
   <meta name="description" content="Website for on demand Indie movies">
   <meta name="keywords" content="Indie movies, viewing, movies, indie">
+  <script defer src="/purchase.js"></script>
   <link rel="stylesheet" href="/css/style.css">
   <title>Preview | SquareEyes</title>
 </head>
@@ -38,9 +39,11 @@
       <a href="/search-result.html"><input class="btn" type="submit" value="Back"></a>
     </div>
     <div class="movie-description">
-    <p class="movie-title">Movie title</p>
+    <p class="movie-title">MANGROVE</p>
     <p class="movie-title-text">Short info section for the movie, detailing the length, director, actors etc, as well as origin country and all necessary info.</p>
-    <a href="/watch.html"><input class="btn" type="submit" value="Purchase"></a>
+    <form action="/purchase.html">
+        <button id="5" onclick="rentMovie(5)">Rent now!</button>
+        </form>
     </div>
     <div class="movie-synopsis">
     <p >Longer synopsis of the movie, plot and more in-depth info.</p>
@@ -55,8 +58,8 @@
       <p>Suggested for you</p>
       </div>
       <div class="picture-reel">
-        <a href="/preview.html"><img src="images/lynnlucy.jpg" alt="Movie 1"></a>
-        <a href="/preview.html"><img src="images/ema.png" alt="Movie 2"></a>
+        <a href="/lynnlucy.html"><img src="images/lynnlucy.jpg" alt="Movie 1"></a>
+        <a href="/ema.html"><img src="images/ema.png" alt="Movie 2"></a>
     </div>
   </div>
 </div>
