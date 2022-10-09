@@ -561,12 +561,16 @@ header div a img:hover {
   grid-area: user;
   display: flex;
   flex-direction: column;
+  color: #979797;
+  font-weight: bold;
 }
 
 .email-change-field {
   grid-area: email;
   display: flex;
   flex-direction: column;
+  color: #979797;
+  font-weight: bold;
 }
 
 .feedback-field {
