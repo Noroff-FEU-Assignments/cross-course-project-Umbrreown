@@ -43,8 +43,8 @@ a:hover {
 
 header {
   display: flex;
-  min-height: 7rem;
-  max-height: 7rem;
+  min-height: 5rem;
+  max-height: 5rem;
   max-width: 98%;
   justify-content: space-between;
   padding: 2% 5% 2% 5%;
@@ -439,6 +439,7 @@ header div a img:hover {
 
 .movie-suggestions {
   grid-area: suggestions;
+  padding: 10px;
 }
 /* ~~~~~~~~~~~~ End of Preview page ~~~~~~~~~~~~ */
 
@@ -450,8 +451,8 @@ header div a img:hover {
 }
 
 .back-arrow {
-  height: 5rem;
-  width: 7rem;
+  height: 3rem;
+  width: 4rem;
 }
 
 .play-button-div {
@@ -459,7 +460,7 @@ header div a img:hover {
   justify-content: center;
   align-items: center;
   align-self: center;
-  height: 40rem;
+  height: 33rem;
 }
 
 .play-button-div img {
